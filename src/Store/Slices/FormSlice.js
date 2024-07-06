@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { addCar } from "./CarsSlice";
 const formSlice = createSlice({
   name: "form",
   initialState: {
@@ -15,6 +15,14 @@ const formSlice = createSlice({
       state.cost = action.payload;
     },
   },
+  // the extraReducers for input when we enter data to the input and enter then clear the input data
+  // first we import the addCar reucer action creator to formSlice from the carSlice
+  extraReducers(builder) {
+    builder.addCase(addCar, (state, action) => {
+      state.name='';
+      state.cost= 0;
+    })
+  }
 });
 
 

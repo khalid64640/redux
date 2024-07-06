@@ -11,7 +11,7 @@ function CarList() {
 
   const handleCarDelete = (car) => {
     if (!car) {
-      console.log("وروره په دې وریبل کې ډیټا نشته ");
+      console.log("Not! Found Data");
     } else {
       dispatch(removeCar(car.id));
     }

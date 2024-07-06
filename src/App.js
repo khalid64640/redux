@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="container">
       <CarForm />
-      <CarList />
       <CarSearch />
+      <CarList />
       <CarValue />
     </div>
   );

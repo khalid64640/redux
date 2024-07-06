@@ -53,29 +53,29 @@ function CarForm() {
 
   return (
     <div className="car-form panel p-5">
-      <h4 className="subtitle is-3 has-text-centered has-text-link">
-        Add Car
-      </h4>
+      <h4 className="subtitle is-3 has-text-centered has-text-link">Add Car</h4>
       <form onSubmit={handleSubmit}>
         <div className="field-group">
           <div className="field-group">
-            <div className="field">
+            <div className="field ">
               <label className="label">Name</label>
               <input
                 type="string"
                 className="input is-expanded"
                 value={name}
                 onChange={handleNameChange}
+                placeholder="Enter car..."
               />
             </div>
 
-            <div className="field">
+            <div className="control">
               <label className="label">Cost</label>
               <input
                 type="number"
                 className="input is-expanded"
                 value={cost || ""}
                 onChange={handleCostChange}
+                placeholder="Enter cost..."
               />
             </div>
           </div>
