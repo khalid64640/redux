@@ -60,7 +60,7 @@ function CarForm() {
             <div className="field ">
               <label className="label">Name</label>
               <input
-                type="string"
+                type="text"
                 className="input is-expanded"
                 value={name}
                 onChange={handleNameChange}

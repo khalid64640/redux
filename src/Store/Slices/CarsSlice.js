@@ -7,9 +7,11 @@ const carsSlice = createSlice({
     data: [],
   },
   reducers: {
+
     changeSearchTerm(state, action) {
       state.searchTerm = action.payload;
     },
+
     addCar(state, action) {
           state.data.push({
             name: action.payload.name,
@@ -17,6 +19,7 @@ const carsSlice = createSlice({
             id: nanoid(),
           });
     },
+    
     removeCar(state, action) {
         const updated = state.data.filter((car) => {
           return car.id !== action.payload;
